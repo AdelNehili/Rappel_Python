@@ -22,10 +22,10 @@ def operator_exo(a:int, b:int = 9):
     """
     print(pretty_sentence)
 def call_operator_exo():
-    operator_exo(3,7) #assignation automatique
+    operator_exo(3,7)     #assignation automatique
     operator_exo(a=3,b=7) #assignation manuelle
     operator_exo(b=7,a=3) #assignation manuelle
-    operator_exo(3) #assignation manpar défaut
+    operator_exo(3)       #assignation manpar défaut
 
 #Operators with strings
 def operator_str_exo(a:str= "chat", b:str= "tortue", mult:int= 25):   
@@ -91,17 +91,17 @@ def if_statements_exo():
 
 #Data Architecture - List, Tuple, Dictionary
 my_dict = {"chaussures" : 3,
-        "lettres" : 6,
-        "vestes" : 4,
-        "chats" : 3}
+            "lettres" : 6,
+            "vestes" : 4,
+            "chats" : 3}
 
-#List : ATTENTION UNE LISTE COMMENCE A L'INDICE ZEROOOOOOOOOOO
+#List : ATTENTION UNE LISTE COMMENCE A L'INDICE ZEROOOOOOOOOOO!!
 def exo_archi():
     my_list = [12,3,4,5.67,89,0]
     index = 0
     pretty_sentence = f"""Pour index = {index}:
-        my_list[{index}] = {my_list[index]}
-    """
+        my_list[{index}] = {my_list[index]}"""
+    
     print(pretty_sentence)
 
     for i in range(0,len(my_list),1):
@@ -114,28 +114,29 @@ def exo_archi():
     my_tuple = (12,3,4,5.67,89,0)
     my_complete_copy_tuple = my_tuple[0:len(my_tuple)]
     my_partial_copy_tuple = my_tuple[2:5]
-    my_modified_tuple = my_tuple[0:3]+(999,)+my_tuple[5:] #ATTENTION : A UN DETAIL
+    my_modified_tuple = my_tuple[0:3]+(999,)+my_tuple[5:]
 
     pretty_sentence = f"""Pour my_tuple = {my_tuple}:
         my_complete_copy_tuple = {my_complete_copy_tuple}
         my_partial_copy_tuple = {my_partial_copy_tuple}
-        my_modified_tuple = {my_complete_copy_tuple}
+        my_modified_tuple = {my_modified_tuple}
     """
     print(pretty_sentence)
 
 
-#WRITING/READING/APPENDING
+def rappel_read_write():
+    #WRITING/READING/APPENDING
 
-with open("temp_1.txt","r") as file_reader:
-    for line in file_reader.readlines():
-        print(line)
+    with open("temp_1.txt","r") as file_reader:
+        for line in file_reader.readlines():
+            print(line)
 
-with open("temp_2.txt","w") as file_writer:
-    #LE WRITE AJOUTE DU TEXTE ET SUPPRIME TOUT CE QU'IL Y AVAIT!!!!
-    pretty_sentence = f"Ce rappel a ete un peu long mais peut-etre qu il a ete utile\n"
-    file_writer.write(pretty_sentence)
+    with open("temp_2.txt","w") as file_writer:
+        #LE WRITE AJOUTE DU TEXTE ET SUPPRIME TOUT CE QU'IL Y AVAIT!!!!
+        pretty_sentence = f"Ce rappel a ete un peu long mais il utile\n"
+        file_writer.write(pretty_sentence)
 
-with open("temp_3.txt","a") as file_appender:
-    #LE APPEND AJOUTE DU TEXTE SANS SUPPRIMER CE QU'IL Y AVAIT
-    pretty_sentence = f"Ce rappel a ete un peu long mais peut-etre qu il a ete utile\n"
-    file_appender.write(pretty_sentence)
+    with open("temp_3.txt","a") as file_appender:
+        #LE APPEND AJOUTE DU TEXTE SANS SUPPRIMER CE QU'IL Y AVAIT
+        pretty_sentence = f"Ce rappel a ete un peu long mais peut-etre qu il a ete utile\n"
+        file_appender.write(pretty_sentence)

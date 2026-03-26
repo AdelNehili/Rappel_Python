@@ -30,7 +30,7 @@ def how_does_modulo_works():
 """
 
 
-def bien_print_matrice(my_matrix):
+def display_well_matrix(my_matrix):
     for i in range(len(my_matrix)):
         print(my_matrix[i])
 
