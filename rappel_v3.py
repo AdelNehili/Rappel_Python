@@ -122,21 +122,3 @@ def exo_archi():
         my_modified_tuple = {my_modified_tuple}
     """
     print(pretty_sentence)
-
-
-def rappel_read_write():
-    #WRITING/READING/APPENDING
-
-    with open("data/temp_1.txt","r") as file_reader:
-        for line in file_reader.readlines():
-            print(line)
-
-    with open("data/temp_2.txt","w") as file_writer:
-        #LE WRITE AJOUTE DU TEXTE ET SUPPRIME TOUT CE QU'IL Y AVAIT!!!!
-        pretty_sentence = f"Ce rappel a ete un peu long mais il utile\n"
-        file_writer.write(pretty_sentence)
-
-    with open("data/temp_3.txt","a") as file_appender:
-        #LE APPEND AJOUTE DU TEXTE SANS SUPPRIMER CE QU'IL Y AVAIT
-        pretty_sentence = f"Ce rappel a ete un peu long mais peut-etre qu il a ete utile\n"
-        file_appender.write(pretty_sentence)
